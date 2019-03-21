@@ -4,14 +4,39 @@
 	<title></title>
 </head>
 <body>
-	<p id="demo"></p>
+	<input type="number" id="input1" value=1>
+	<input type="number" id="input2" value=2>
 	<script>
-		var x,y,z;
-		x=5;
-		y=6;
-		z=x+y;
-		document.getElementById('demo').innerHTML = z;
+		function add(){
+			var x,y
+			x=parseFloat(document.getElementById("input1").value);
+			y=parseFloat(document.getElementById("input2").value);
+			document.getElementById("result").innerHTML= x+y;
+		}
+		function subtract(){
+			var x,y
+			x=parseFloat(document.getElementById("input1").value);
+			y=parseFloat(document.getElementById("input2").value);
+			document.getElementById("result").innerHTML= x-y;
+		}
+		function multiply(){
+			var x,y
+			x=parseFloat(document.getElementById("input1").value);
+			y=parseFloat(document.getElementById("input2").value);
+			document.getElementById("result").innerHTML= x*y;
+		}
+		function divide(){
+			var x,y
+			x=parseFloat(document.getElementById("input1").value);
+			y=parseFloat(document.getElementById("input2").value);
+			document.getElementById("result").innerHTML= x/y;
+		}
 	</script>
+	<button onclick="add()">add</button>
+	<button onclick="subtract()">subtract</button>
+	<button onclick="multiply()">multiply</button>
+	<button onclick="divide()">divide</button>
+	<h5>Calculation Result:<output id="result"></output></h5>
 
 </body>
 </html>

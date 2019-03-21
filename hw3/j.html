@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h5>Input the score:<input type="number" id="score" value=60></h5>
+
+<button onclick="MyFunction()">Test</button>
+
+<p id="demo"></p>
+
+<script>
+function MyFunction(){ 
+  var s;
+  var t;
+  s = parseFloat(document.getElementById("score").value);
+  if (s >= 60) {
+    t = "pass";
+  } else {
+    t = "fail";
+  }
+  document.getElementById("demo").innerHTML = t;
+}
+</script>
+
+</body>
+</html>
